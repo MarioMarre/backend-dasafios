@@ -44,7 +44,7 @@ class ProductManager {
 
   saveProducts() {
     const data = JSON.stringify(this.products);
-    writeFileSync(this.filename, data, "utf8");
+    fs.writeFileSync(this.filename, data, "utf8");
   }
 
   getProducts() {
